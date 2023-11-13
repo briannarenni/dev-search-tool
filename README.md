@@ -1,5 +1,5 @@
 # Responsive GitHub User Search
-Made with Svelte, Beer.css, and Lucide Icons 💜
+Made with Svelte, Pico.css, and Lucide Icons 💜
 
 ## Behavior & Features
 - Light and dark mode based on user's system color scheme with toggle switch

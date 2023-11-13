@@ -1,10 +1,10 @@
 <script>
-  import { Header, Main, Footer } from './lib/components/Layout/index';
+  import { Header, Card, Footer } from './lib/layout/index';
 </script>
 
 <main>
   <Header />
-  <Main />
+  <Card />
   <Footer />
 </main>
 

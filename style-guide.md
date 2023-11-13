@@ -33,7 +33,7 @@
 
 - Buttons:
   - Background color: `#0079FF`
-  - Font: [Font Name], [Size]
+  - Font: Source Code Pro
 - Input Fields:
   - Border Radius: 1em
-  - Font: [Font Name], [Size]
+  - Font: Source Code Pro
