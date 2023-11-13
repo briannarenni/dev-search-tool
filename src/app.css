@@ -13,6 +13,39 @@
 
 body {
   font-family: var(--primary-font), monospace;
-  line-height: 1.2;
+  line-height: 1.6;
   font-size: 16px;
+}
+
+/* Utility Classes */
+.flex-row {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.na-text {
+  color: var(--null-color);
+  text-decoration: none;
+  pointer-events: none;
+}
+
+.error-text {
+  color: var(--error-color);
+  text-align: center;
+}
+
+.screen-reader {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }

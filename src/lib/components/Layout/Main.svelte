@@ -1,1 +1,5 @@
-<main></main>
+<script>
+  import { Card } from '../UserProfile/index.js';
+</script>
+
+<main />
