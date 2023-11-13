@@ -1,13 +1,15 @@
-<p class="footer">
-  Brianna Renni | <a
-    href="https://github.com/briannarenni/"
-    target="_blank">Github</a
-  >
-</p>
+<footer class="footer">
+  <p>
+    Brianna Renni |
+    <a
+      href="https://github.com/briannarenni/"
+      target="_blank">Github</a
+    >
+  </p>
+</footer>
 
 <style>
   .footer {
-    font-size: 12px;
     text-align: center;
   }
 
