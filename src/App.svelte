@@ -2,11 +2,17 @@
   import { Header, Card, Footer } from './lib/layout/index';
 </script>
 
-<main>
+<header>
   <Header />
+</header>
+
+<main>
   <Card />
-  <Footer />
 </main>
+
+<footer>
+  <Footer />
+</footer>
 
 <style>
 </style>

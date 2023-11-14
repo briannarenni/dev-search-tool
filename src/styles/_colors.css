@@ -5,10 +5,6 @@
   --error-color: #ff0000;
 
   /* Pico */
-  --primary: #b024ff;
-  --primary-hover: #9600e0;
-  --primary-inverse: #FFF;
-
   --form-element-active-border-color: var(--primary);
   --form-element-focus-color: var(--primary-focus);
   --switch-color: var(--primary-inverse);
@@ -18,7 +14,11 @@
 /* Light Mode */
 [data-theme='light'],
 :root:not([data-theme='dark']) {
+  --primary: #b024ff;
+
   /* Pico */
+  --primary-hover: #9600e0;
+  --primary-inverse: #FFF;
   --primary-focus: rgba(176, 36, 255, 0.125);
 
   --primary-bg: #F6F8FF;
@@ -30,7 +30,11 @@
 
 /* Dark Mode */
 [data-theme='dark'] {
+  --primary: #b024ff;
+
   /* Pico  */
+  --primary-hover: #9600e0;
+  --primary-inverse: #FFF;
   --primary-focus: rgba(176, 36, 255, 0.25);
 
   --primary-bg: #0D0915;
