@@ -1,6 +1,6 @@
 <script></script>
 
-<img class="pfp" src="#"/>
+<img class="pfp" src="#" alt="User's profile icon"/>
 
 <p>[Name]</p>
 <p>[Username]</p>
