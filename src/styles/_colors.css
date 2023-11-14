@@ -5,6 +5,10 @@
   --error-color: #ff0000;
 
   /* Pico */
+  --primary: #b024ff;
+  --primary-hover: #9600e0;
+  --primary-inverse: #FFF;
+
   --form-element-active-border-color: var(--primary);
   --form-element-focus-color: var(--primary-focus);
   --switch-color: var(--primary-inverse);
@@ -12,32 +16,26 @@
 }
 
 /* Light Mode */
-[data-theme="light"],
-:root:not([data-theme="dark"]) {
+[data-theme='light'],
+:root:not([data-theme='dark']) {
+  /* Pico */
+  --primary-focus: rgba(176, 36, 255, 0.125);
+
   --primary-bg: #F6F8FF;
   --secondary-bg: #697C9A;
   --primary-text: #000000;
   --secondary-text: #201f24;
   --box-shadow: 0px 16px 30px -10px #4660bb33;
-
-  /* Pico */
-  --primary: #b024ff;
-  --primary-hover: #9600e0;
-  --primary-focus: rgba(176, 36, 255, 0.125);
-  --primary-inverse: #FFF;
 }
 
 /* Dark Mode */
 [data-theme='dark'] {
+  /* Pico  */
+  --primary-focus: rgba(176, 36, 255, 0.25);
+
   --primary-bg: #0D0915;
   --secondary-bg: #4F555978;
   --primary-text: #ffffff;
   --secondary-text: #d4d3d3;
   --box-shadow: none;
-
-  /* Pico  */
-  --primary: #b024ff;
-  --primary-hover: #9600e0;
-  --primary-focus: rgba(176, 36, 255, 0.25);
-  --primary-inverse: #FFF;
 }
