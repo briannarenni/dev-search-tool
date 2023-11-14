@@ -1,6 +1,6 @@
 <script>
   import { Search } from 'lucide-svelte';
-  import SearchBtn from '.../SearchBtn.svelte';
+  import SearchBtn from './SearchBtn.svelte';
 </script>
 
 <form
