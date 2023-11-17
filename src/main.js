@@ -1,4 +1,4 @@
-import './styles/pico-custom.scss'
+// import './styles/pico-custom.scss'
 import './app.css'
 import App from './App.svelte'
 
