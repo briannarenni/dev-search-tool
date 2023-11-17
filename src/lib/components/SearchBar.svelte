@@ -1,22 +1,29 @@
 <script>
-  import { Search } from 'lucide-svelte';
   import SearchBtn from './SearchBtn.svelte';
 </script>
 
 <form
   action="#"
-  class="search"
+  class="search-form flex-row"
   novalidate
 >
-  <!-- TODO: Search icon -->
   <input
     type="search"
-    id="search-input"
+    id="search"
     class="search-bar"
-    placeholder="Search GitHub username"
+    name="search"
+    placeholder="Enter Github username"
     aria-label="Search Github username"
   />
+
   <!-- TODO: Add Button -->
 </form>
 
-<style></style>
+<style>
+  .search-form {
+    justify-content: center;
+  }
+  .search-bar {
+    width: 90%;
+  }
+</style>

@@ -2,16 +2,106 @@
   --primary-font: 'Source Code Pro';
   --secondary-font: 'Cousine';
 
-  /* Icon sizing */
+  /* Base Icon Sizing */
   --icon-xs: 1em;
   --icon-sm: 1.5em;
   --icon-md: 2em;
   --icon-lg: 3em;
 
-  /* Spacing */
-  --spacing-xs: .5em;
-  --spacing-sm: 1em;
-  --spacing-md: 1.25em;
-  --spacing-lg: 1.5em;
-  --spacing-xl: 2em;
+  /* Base Padding Scale */
+  --padding-xs: calc(1em * 0.5);
+  --padding-sm: 1em;
+  --padding-md: calc(1em * 1.25);
+  --padding-lg: calc(1em * 1.5);
+  --padding-xl: calc(1em * 2);
+  --padding-xxl: calc(1em * 3);
+  --padding-xxxl: calc(1em * 4);
+
+  /* Base Margin Scale */
+  --margin-xs: var(--padding-xs);
+  --margin-sm: var(--padding-sm);
+  --margin-md: var(--padding-md);
+  --margin-lg: var(--padding-lg);
+  --margin-xl: var(--padding-xl);
+  --margin-xxl: var(--padding-xxl);
+  --margin-xxxl: var(--padding-xxxl);
+}
+
+@media (min-width: 768px) {
+  :root {
+    /* Resp. Icon Sizing */
+    --icon-xs: 1.25em;
+    --icon-sm: 1.75em;
+    --icon-md: 2.25em;
+    --icon-lg: 3.5em;
+
+    /* Resp. Padding Scale */
+    --padding-xs: calc(1em * 0.75);
+    --padding-sm: calc(1em * 1.25);
+    --padding-md: calc(1em * 1.5);
+    --padding-lg: calc(1em * 1.75);
+    --padding-xl: calc(1em * 2.25);
+    --padding-xxl: calc(1em * 3.5);
+    --padding-xxxl: calc(1em * 4.5);
+
+    /* Resp. Margin Scale */
+    --margin-xs: var(--padding-xs);
+    --margin-sm: var(--padding-sm);
+    --margin-md: var(--padding-md);
+    --margin-lg: var(--padding-lg);
+    --margin-xl: var(--padding-xl);
+    --margin-xxl: var(--padding-xxl);
+    --margin-xxxl: var(--padding-xxxl);
+  }
+}
+
+@media (min-width: 992px) {
+  :root {
+    --icon-xs: 1.5em;
+    --icon-sm: 2em;
+    --icon-md: 2.5em;
+    --icon-lg: 4em;
+
+    --padding-xs: calc(1em * 1);
+    --padding-sm: calc(1em * 1.5);
+    --padding-md: calc(1em * 1.75);
+    --padding-lg: calc(1em * 2);
+    --padding-xl: calc(1em * 2.5);
+    --padding-xxl: calc(1em * 4);
+    --padding-xxxl: calc(1em * 5);
+
+    --margin-xs: var(--padding-xs);
+    --margin-sm: var(--padding-sm);
+    --margin-md: var(--padding-md);
+    --margin-lg: var(--padding-lg);
+    --margin-xl: var(--padding-xl);
+    --margin-xxl: var(--padding-xxl);
+    --margin-xxxl: var(--padding-xxxl);
+  }
+}
+
+/* Extra Large Devices */
+@media (min-width: 1200px) {
+  :root {
+    --icon-xs: 1.75em;
+    --icon-sm: 2.25em;
+    --icon-md: 2.75em;
+    --icon-lg: 4.5em;
+
+    --padding-xs: calc(1em * 1.25);
+    --padding-sm: calc(1em * 1.75);
+    --padding-md: calc(1em * 2);
+    --padding-lg: calc(1em * 2.5);
+    --padding-xl: calc(1em * 3);
+    --padding-xxl: calc(1em * 4.5);
+    --padding-xxxl: calc(1em * 5.5);
+
+    --margin-xs: var(--padding-xs);
+    --margin-sm: var(--padding-sm);
+    --margin-md: var(--padding-md);
+    --margin-lg: var(--padding-lg);
+    --margin-xl: var(--padding-xl);
+    --margin-xxl: var(--padding-xxl);
+    --margin-xxxl: var(--padding-xxxl);
+  }
 }

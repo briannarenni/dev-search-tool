@@ -4,10 +4,10 @@
 $semantic-root-element: '#app';
 
 // Enable <header>, <main>, <footer> inside $semantic-root-element as containers
-$enable-semantic-container: true;
+$enable-semantic-container: false;
 
 // Enable .classes
-$enable-classes: false;
+$enable-classes: true;
 
 // Import Pico
 @import '@picocss/pico/scss/pico';
