@@ -17,6 +17,4 @@
     font-family: var(--primary-font), monospace;
     font-weight: 400;
   }
-
-
 </style>

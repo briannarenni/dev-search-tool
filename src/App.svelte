@@ -13,21 +13,26 @@
   <Footer />
 </div>
 
+<!-- TODO: FINISH -->
 <style>
   .app-container {
-    padding-block: var(--padding-xl);
-    padding-inline: var(--padding-lg);
+    margin: var(--gap-sm);
+    padding: var(--gap-xs);
   }
 
-  .main-container {
-     display: flex;
-  justify-content: center;
-  align-items: center;
-  }
-
-@media (min-width: 425px) {
+  @media (min-width: 768px) {
     .app-container {
-    padding-inline: var(--padding-xxl);
+      margin-block: var(--gap-md);
+      margin-inline: var(--gap-md);
+      padding: var(--gap-sm);
+    }
   }
-}
+
+  @media (min-width: 992px) {
+    .app-container {
+
+      margin-inline: var(--gap-lg);
+      padding: var(--gap-md);
+    }
+  }
 </style>
