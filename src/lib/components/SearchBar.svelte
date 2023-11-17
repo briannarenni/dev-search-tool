@@ -20,10 +20,11 @@
 </form>
 
 <style>
-  .search-form {
+  /* .search-form {
     justify-content: center;
-  }
-  .search-bar {
+  } */
+
+  /* .search-bar {
     width: 90%;
-  }
+  } */
 </style>
