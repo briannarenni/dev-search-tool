@@ -3,7 +3,7 @@
 </script>
 
 <header class="header flex-row">
-  <h1 class="site-logo">devfinder</h1>
+  <h1 class="site-logo">devSearch</h1>
 
   <Toggle />
 </header>
@@ -14,5 +14,9 @@
   }
   .site-logo {
     color: var(--primary);
+    font-family: var(--primary-font), monospace;
+    font-weight: 400;
   }
+
+
 </style>

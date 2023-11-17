@@ -34,6 +34,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transform: scale(0.9);
   }
 
   .switch {
@@ -80,5 +81,11 @@
 
   input:checked + .slider:before {
     transform: translateX(26px);
+  }
+
+  @media (max-width: 768px) {
+    .toggle-switch {
+      transform: scale(0.8);
+    }
   }
 </style>
