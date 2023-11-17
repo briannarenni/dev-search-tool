@@ -12,9 +12,17 @@
   .header {
     justify-content: space-between;
   }
+
   .site-logo {
     color: var(--primary);
     font-family: var(--primary-font), monospace;
+    font-size: 2.125em;
     font-weight: 400;
+  }
+
+  @media (min-width: 1440px) {
+    .site-logo {
+      font-size: 2.25em;
+    }
   }
 </style>
