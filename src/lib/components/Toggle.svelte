@@ -31,61 +31,55 @@
 
 <style>
   .toggle-switch {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: scale(0.9);
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-    margin: 0 10px;
-  }
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px; /* Reduced from 60px */
+  height: 28px; /* Reduced from 34px */
+  margin: 0 10px;
+}
 
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
 
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--null-color);
-    transition: 0.5s;
-    border-radius: 34px;
-  }
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--null-color);
+  transition: 0.5s;
+  border-radius: 28px; /* Adjusted to match the new height */
+}
 
-  .slider:before {
-    position: absolute;
-    content: '';
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: 0.5s;
-    border-radius: 50%;
-  }
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 22px; /* Reduced from 26px */
+  width: 22px; /* Reduced from 26px */
+  left: 3px; /* Adjusted for smaller size */
+  bottom: 3px; /* Adjusted for smaller size */
+  background-color: white;
+  transition: 0.5s;
+  border-radius: 50%;
+}
 
-  input:checked + .slider {
-    background-color: var(--primary);
-  }
+input:checked + .slider {
+  background-color: var(--primary);
+}
 
-  input:checked + .slider:before {
-    transform: translateX(26px);
-  }
+input:checked + .slider:before {
+  transform: translateX(22px); /* Adjusted for the new width of the slider */
+}
 
-  @media (max-width: 768px) {
-    .toggle-switch {
-      transform: scale(0.8);
-    }
-  }
 </style>

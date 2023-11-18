@@ -1,38 +1,42 @@
 <script>
-  import { Header, Search, Card, Footer } from './lib/layout/index';
+  import { Header, Main, Footer } from './lib/layout/index';
 </script>
 
 <div class="app-container">
   <Header />
-
-  <main class="main-container">
-    <Search />
-    <Card />
-  </main>
-
+  <Main />
   <Footer />
 </div>
 
-<!-- TODO: FINISH -->
 <style>
   .app-container {
-    margin: var(--gap-sm);
-    padding: var(--gap-xs);
+    margin-block: var(--gap-lg);
+    padding-inline: var(--gap-lg);
   }
 
+  /* Queries */
   @media (min-width: 768px) {
     .app-container {
-      margin-block: var(--gap-md);
-      margin-inline: var(--gap-md);
-      padding: var(--gap-sm);
+      margin-inline: calc(var(--gap-lg) * 2);
+      padding-inline: var(--gap-xl);
     }
   }
 
   @media (min-width: 992px) {
     .app-container {
+      margin-inline: calc(var(--gap-xl) * 2.5);
+    }
+  }
 
-      margin-inline: var(--gap-lg);
-      padding: var(--gap-md);
+  @media (min-width: 1200px) {
+    .app-container {
+      margin-block: var(--gap-xl);
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .app-container {
+      margin-block: var(--gap-xl);
     }
   }
 </style>
