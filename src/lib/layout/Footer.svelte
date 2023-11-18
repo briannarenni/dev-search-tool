@@ -14,11 +14,11 @@
   }
 
   .footer a {
-    color: var(--action-text);
+    color: var(--action-color);
   }
 
   .footer a:hover {
-    color: var(--action-text);
+    color: var(--action-color);
     font-weight: bold;
   }
 </style>

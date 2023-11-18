@@ -8,4 +8,8 @@
   <Card />
 </main>
 
-<style></style>
+<style>
+  main {
+    margin-block-start: var(--gap-lg);
+  }
+</style>
