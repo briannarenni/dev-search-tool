@@ -55,11 +55,7 @@
   $: ariaInvalid = touched ? isInvalid : undefined;
 </script>
 
-<form
-  action="#"
-  class="search-form flex-row"
-  novalidate
->
+<form action="#" class="search-form flex-row" novalidate>
   <input
     type="search"
     id="search"
@@ -103,6 +99,12 @@
   .search-form {
     margin-block-end: 0;
   }
+
+  .search-bar {
+    border: 0.5px solid var(--primary);
+    margin-block-end: 0;
+  }
+
   @media (min-width: 768px) {
     .search-form {
       padding-inline: var(--gap-sm);

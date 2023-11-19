@@ -1,7 +1,11 @@
 /* Global colors */
 :root {
+  --primary-font: 'Source Code Pro';
+  --secondary-font: 'DM Mono';
+
   --action-color: #0079FF;
-  --null-color: #807a86;
+  --icon-color: rgba(175, 36, 255, 0.764);
+  --null-color: #6e6b70;
   --error-color: #ff0000;
 
   /* Pico */
@@ -22,9 +26,9 @@
   --primary-focus: rgba(176, 36, 255, 0.125);
 
   --primary-bg: #F6F8FF;
-  --secondary-bg: #697C9A;
+  --secondary-bg: #dcdcdc44;
   --primary-text: #000000;
-  --secondary-text: #201f24;
+  --secondary-text: #5b7093;
   --box-shadow: 0px 16px 30px -10px #4660bb33;
 }
 
@@ -38,7 +42,7 @@
   --primary-focus: rgba(176, 36, 255, 0.25);
 
   --primary-bg: #0D0915;
-  --secondary-bg: #4F555978;
+  --secondary-bg: #11191f;
   --primary-text: #ffffff;
   --secondary-text: #d4d3d3;
   --box-shadow: none;

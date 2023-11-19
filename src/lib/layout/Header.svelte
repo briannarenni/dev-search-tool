@@ -17,7 +17,7 @@
     color: var(--primary);
     font-family: var(--primary-font), monospace;
     font-size: 2.125em;
-    font-weight: 400;
+    font-weight: 600;
   }
 
   @media (min-width: 1440px) {

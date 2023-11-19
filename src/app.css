@@ -17,6 +17,15 @@ body {
   font-size: 16px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
+}
+
 /* Utility Classes */
 .flex-row {
   display: flex;
@@ -29,11 +38,15 @@ body {
 
 .null-text {
   color: var(--null-color);
+  font-style: italic;
   text-decoration: none;
   pointer-events: none;
 }
 
 .error-text {
   color: var(--error-color);
-  text-align: center;
+  font-weight: bold;
+  font-family: var(--secondary-font);
+  padding-inline-start: var(--spacing-lg);
+  margin-block-start: var(--spacing-sm);
 }
