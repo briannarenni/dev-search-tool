@@ -37,6 +37,7 @@
 
   .user-info {
     margin-block-end: var(--gap-xl);
+    text-align: center;
   }
 
   .name {

@@ -97,6 +97,8 @@
   */
 
   .search-form {
+    max-width: 98%;
+    margin: 0 auto;
     margin-block-end: 0;
   }
 
@@ -105,15 +107,9 @@
     margin-block-end: 0;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 700px) and (max-width: 1024px) {
     .search-form {
       padding-inline: var(--gap-sm);
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .search-form {
-      padding-inline: var(--gap-md);
     }
   }
 </style>

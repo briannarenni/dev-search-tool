@@ -34,7 +34,7 @@
   }
 
   .user-details {
-    padding-left: 0;
+    display: grid;
     margin-block-end: 0;
   }
 
@@ -51,5 +51,48 @@
 
   li span {
     margin-inline-start: var(--spacing-sm);
+  }
+
+  @media (min-width: 500px) {
+    .detail {
+      margin-inline-start: var(--spacing-md);
+    }
+  }
+
+  @media (min-width: 850px) {
+    section {
+      display: flex;
+      justify-content: center;
+    }
+
+    li span {
+      margin-inline-start: var(--spacing-xs);
+    }
+
+    .user-details {
+      grid-template-columns: repeat(2, 1fr);
+      width: 95%;
+      gap: var(--spacing-md);
+    }
+
+    .detail {
+      margin-block-end: 0;
+    }
+
+    .location {
+      grid-row: 1 / 2;
+    }
+
+    .twitter {
+      grid-row: 1 / 2;
+    }
+
+    .website {
+      grid-row: 2 / 3;
+    }
+
+    .company {
+      grid-row: 2 / 3;
+    }
   }
 </style>

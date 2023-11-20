@@ -21,10 +21,11 @@
 <style>
   /* User Data */
   .user-stats {
-    background-color: var(--secondary-bg);
-    justify-content: space-evenly;
+    justify-content: space-around;
     text-align: center;
-    gap: 0.7em;
+    gap: 0.5em;
+    padding-inline: var(--spacing-sm);
+    background-color: var(--secondary-bg);
     border-radius: 1em;
   }
 
@@ -34,6 +35,7 @@
 
   .stat-title {
     color: var(--secondary-text);
+    font-family: var(--secondary-font);
     font-size: calc(0.8em + 0.5vw);
   }
 
@@ -41,5 +43,12 @@
     color: var(--primary-text);
     font-weight: 700;
     font-size: calc(1em + 0.6vw);
+  }
+
+  @media (min-width: 500px) {
+    .user-stats {
+      padding-inline: var(--spacing-sm);
+      margin-inline: var(--spacing-lg);
+    }
   }
 </style>

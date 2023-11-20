@@ -12,6 +12,7 @@
   .card {
     margin-block: var(--spacing-md);
     padding-block-start: var(--spacing-md);
+    padding-block-end: var(--spacing-sm);
     border-radius: 1em;
   }
 </style>
