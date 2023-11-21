@@ -34,3 +34,21 @@ export const mapApiData = (data) => {
     isLoading: false
   });
 };
+
+export const resetStore = () => {
+  userProfile.set({
+    avatar_url: '',
+    name: '',
+    username: '',
+    join_date: '',
+    bio: '',
+    repos: 0,
+    followers: 0,
+    following: 0,
+    location: '',
+    website: '',
+    twitter: '',
+    company: '',
+    isLoading: false
+  });
+}

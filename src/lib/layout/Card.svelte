@@ -1,7 +1,7 @@
 <script>
   import { userProfile as user } from '../../scripts/stores/user-store';
+    import { Info, Stats, Details } from '../components/profile/index.js';
   import Loading from '../components/Loading.svelte';
-  import { Info, Stats, Details } from '../components/profile/index.js';
 </script>
 
 <article class="card">
@@ -22,4 +22,6 @@
     padding-block-end: var(--spacing-sm);
     border-radius: 1em;
   }
+
+
 </style>

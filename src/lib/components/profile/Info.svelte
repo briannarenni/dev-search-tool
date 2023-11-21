@@ -19,7 +19,7 @@
       <h3 class="name">{$user.username}</h3>
     {/if}
     <h4 class="username">{$user.username}</h4>
-    <p class="joined flex-row"><Cake size={20} color={iconColor} /> {$user.join_date}</p>
+    <p class="joined flex-row"><Cake color={iconColor} /> {$user.join_date}</p>
   </section>
 </div>
 

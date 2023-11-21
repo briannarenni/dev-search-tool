@@ -1,8 +1,6 @@
 <script>
-  import { Cake, MapPin, Link, Twitter, Building } from 'lucide-svelte';
+  import { MapPin, Link, Twitter, Building } from 'lucide-svelte';
   import { userProfile as user } from '../../../scripts/stores/user-store';
-
-  const setTwitterUrl = (handle) => `https://twitter.com/${handle}`;
 
   const validateUrl = (str) => {
     let url = str.trim();
@@ -49,7 +47,7 @@
         <span class="null-text">N/A</span>
       {:else}
         <span>
-          <a class="link-text" href={setTwitterUrl($user.twitter)} target="_blank"
+          <a class="link-text" href={`https://twitter.com/${$user.twitter}`} target="_blank"
             >{$user.twitter}</a
           >
         </span>

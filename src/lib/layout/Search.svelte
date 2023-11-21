@@ -1,7 +1,7 @@
 <script>
   import { validateSearchInput } from '../../scripts/utilities/validation';
   import { fetchUserData } from '../../scripts/utilities/fetch';
-  import { mapApiData, userProfile as user } from '../../scripts/stores/user-store';
+  import { mapApiData, resetStore, userProfile as user } from '../../scripts/stores/user-store';
 
   let searchInput;
   let searchStr = '';
@@ -31,13 +31,16 @@
       } catch (error) {
         if (error.message === 'No results') {
           isInvalid = true;
-          $user.isLoading = false;
+          resetStore();
         } else {
           isInvalid = false;
+          $user.isLoading = false;
         }
         errorText = error.message;
       } finally {
         $user.isLoading = false;
+        searchStr = '';
+        isInvalid = false;
       }
     }
   };
