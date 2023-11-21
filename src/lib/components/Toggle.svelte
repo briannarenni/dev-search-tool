@@ -57,7 +57,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--null-color);
+    background-color: var(--null-text);
     transition: 0.5s;
     border-radius: 28px;
   }

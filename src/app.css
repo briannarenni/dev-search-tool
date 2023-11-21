@@ -36,8 +36,15 @@ h6 {
   flex-direction: column;
 }
 
+.link-text {
+  color: var(--action-text);
+  font-family: inherit;
+  text-decoration: underline;
+}
+
 .null-text {
-  color: var(--null-color);
+  color: var(--null-text);
+  font-family: var(--secondary-font), monospace;
   font-style: italic;
   text-decoration: none;
   pointer-events: none;

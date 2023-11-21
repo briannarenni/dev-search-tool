@@ -41,7 +41,7 @@
 
   .stat {
     color: var(--primary-text);
-    font-weight: 700;
+    font-weight: 600;
     font-size: calc(1em + 0.6vw);
   }
 

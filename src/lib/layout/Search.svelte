@@ -1,14 +1,13 @@
 <script>
   import { validateSearchInput } from '../../scripts/utilities/validation';
   import { fetchUserData } from '../../scripts/utilities/fetch';
-  import { mapApiData } from '../../scripts/stores/user-store';
+  import { mapApiData, userProfile as user } from '../../scripts/stores/user-store';
 
   let searchInput;
   let searchStr = '';
   let errorText = '';
   let isInvalid = false;
   let touched = false;
-  let isLoading = false;
 
   const submitSearch = (event) => {
     if (event.key === 'Enter') {
@@ -23,8 +22,8 @@
     errorText = result.errorText;
 
     if (!isInvalid) {
+      $user.isLoading = true;
       try {
-        isLoading = true;
         const userData = await fetchUserData(searchStr);
         mapApiData(userData);
         isInvalid = false;
@@ -32,12 +31,13 @@
       } catch (error) {
         if (error.message === 'No results') {
           isInvalid = true;
+          $user.isLoading = false;
         } else {
           isInvalid = false;
         }
         errorText = error.message;
       } finally {
-        isLoading = false;
+        $user.isLoading = false;
       }
     }
   };
@@ -71,12 +71,6 @@
   />
 </form>
 
-<!-- {#if isLoading}
-  <div
-    class="loading"
-    aria-busy="true"
-  />
-{/if} -->
 {#if errorText}
   <p class="error-text error-p">
     {errorText}
@@ -84,18 +78,6 @@
 {/if}
 
 <style>
-  /* .search-form {
-    position: relative;
-  } */
-
-  /* .loading {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  */
-
   .search-form {
     max-width: 98%;
     margin: 0 auto;

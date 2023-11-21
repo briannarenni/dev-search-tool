@@ -1,6 +1,16 @@
 <script>
-  import { MapPin, Link, Twitter, Building } from 'lucide-svelte';
+  import { Cake, MapPin, Link, Twitter, Building } from 'lucide-svelte';
   import { userProfile as user } from '../../../scripts/stores/user-store';
+
+  const setTwitterUrl = (handle) => `https://twitter.com/${handle}`;
+
+  const validateUrl = (str) => {
+    let url = str.trim();
+    if (!url.startsWith('http://') && !url.startsWith('https://')) {
+      return `https://${url}`;
+    }
+    return url;
+  };
 
   const iconColor = getComputedStyle(document.documentElement)
     .getPropertyValue('--icon-color')
@@ -11,19 +21,50 @@
   <ul class="user-details">
     <li class="detail location">
       <MapPin color={iconColor} />
-      <span>{$user.location}</span>
+      {#if $user.location === 'N/A'}
+        <span class="null-text">N/A</span>
+      {:else}
+        <span>{$user.location}</span>
+      {/if}
     </li>
-    <li class="detail website">
-      <Link color={iconColor} />
-      <span>{$user.website}</span>
-    </li>
-    <li class="detail twitter">
-      <Twitter color={iconColor} />
-      <span>{$user.twitter}</span>
-    </li>
+
     <li class="detail company">
       <Building color={iconColor} />
-      <span>{$user.company}</span>
+      {#if $user.company === 'N/A'}
+        <span class="null-text">N/A</span>
+      {:else if $user.company.startsWith('@') && ($user.company.match(/@/g) || []).length === 1}
+        <span>
+          <a class="link-text" href="https://github.com/{$user.company.slice(1)}" target="_blank">
+            {$user.company}
+          </a>
+        </span>
+      {:else}
+        <span>{$user.company}</span>
+      {/if}
+    </li>
+
+    <li class="detail twitter">
+      <Twitter color={iconColor} />
+      {#if $user.twitter === 'N/A'}
+        <span class="null-text">N/A</span>
+      {:else}
+        <span>
+          <a class="link-text" href={setTwitterUrl($user.twitter)} target="_blank"
+            >{$user.twitter}</a
+          >
+        </span>
+      {/if}
+    </li>
+
+    <li class="detail website">
+      <Link color={iconColor} />
+      {#if !$user.website}
+        <span class="null-text">N/A</span>
+      {:else}
+        <span>
+          <a class="link-text" href={validateUrl($user.website)} target="_blank">{$user.website}</a>
+        </span>
+      {/if}
     </li>
   </ul>
 </section>
@@ -45,11 +86,11 @@
   }
 
   .detail {
-    color: var(--primary-text);
+    color: var(--secondary-text);
     margin-block-end: var(--spacing-lg);
   }
 
-  li span {
+  .detail span {
     margin-inline-start: var(--spacing-sm);
   }
 
@@ -65,7 +106,11 @@
       justify-content: center;
     }
 
-    li span {
+    .detail {
+      margin-block-end: 0;
+    }
+
+    .detail span {
       margin-inline-start: var(--spacing-xs);
     }
 
@@ -73,10 +118,6 @@
       grid-template-columns: repeat(2, 1fr);
       width: 95%;
       gap: var(--spacing-md);
-    }
-
-    .detail {
-      margin-block-end: 0;
     }
 
     .location {

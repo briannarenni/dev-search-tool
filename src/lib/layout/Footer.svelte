@@ -1,15 +1,13 @@
 <footer class="footer">
   <p>
     Brianna Renni |
-    <a
-      href="https://github.com/briannarenni/"
-      target="_blank">Github</a
-    >
+    <a href="https://github.com/briannarenni/" target="_blank">Github</a>
   </p>
 </footer>
 
 <style>
   .footer {
+    font-family: var(--secondary-font);
     text-align: center;
   }
 

@@ -13,7 +13,8 @@ export const userProfile = writable({
   location: '',
   website: '',
   twitter: '',
-  company: ''
+  company: '',
+  isLoading: false
 });
 
 export const mapApiData = (data) => {
@@ -22,13 +23,14 @@ export const mapApiData = (data) => {
     name: data.name ?? data.login,
     username: `@${data.login}`,
     join_date: `Joined ${format(parseISO(data.created_at), 'dd MMM yyyy')}`,
-    bio: data.bio ?? 'This profile has no bio',
+    bio: data.bio ?? '(Profile has no bio)',
     repos: data.public_repos,
     followers: data.followers,
     following: data.following,
-    location: data.location ?? 'Not available',
-    website: data.blog ?? 'Not available',
-    twitter: data.twitter_username ?? 'Not available',
-    company: data.company ?? 'Not available'
+    location: data.location ?? 'N/A',
+    website: data.blog ?? 'N/A',
+    twitter: data.twitter_username ?? 'N/A',
+    company: data.company ?? 'N/A',
+    isLoading: false
   });
 };
