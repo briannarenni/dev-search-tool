@@ -85,6 +85,10 @@
     margin-inline-start: var(--spacing-sm);
   }
 
+  .detail:last-child {
+    margin-block-end: var(--spacing-xs);
+  }
+
   @media (max-width: 395px) {
     .user-details {
       padding-inline-start: 0;

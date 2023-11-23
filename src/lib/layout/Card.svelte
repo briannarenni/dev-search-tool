@@ -1,7 +1,15 @@
 <script>
-  import { userProfile as user } from '../../scripts/stores/user-store';
+  import { onMount } from 'svelte';
+
+  import { fetchUserData } from '../../scripts/utilities/fetch';
+  import { mapApiData, userProfile as user } from '../../scripts/stores/user-store';
   import { Info, Stats, Details } from '../components/profile/index.js';
   import Loading from '../components/Loading.svelte';
+
+  onMount(async () => {
+    const userData = await fetchUserData('octocat');
+    mapApiData(userData);
+  });
 </script>
 
 <article class="card">
