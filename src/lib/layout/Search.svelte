@@ -55,6 +55,7 @@
     validateInput();
     searchInput.blur();
   };
+
   $: ariaInvalid = touched ? isInvalid : undefined;
 </script>
 
@@ -90,6 +91,10 @@
   .search-bar {
     border: 0.5px solid var(--primary);
     margin-block-end: 0;
+  }
+
+  .error-text {
+    text-align: center;
   }
 
   @media (min-width: 700px) and (max-width: 1024px) {

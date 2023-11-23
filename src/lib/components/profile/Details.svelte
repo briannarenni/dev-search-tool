@@ -1,14 +1,7 @@
 <script>
   import { MapPin, Link, Twitter, Building } from 'lucide-svelte';
   import { userProfile as user } from '../../../scripts/stores/user-store';
-
-  const validateUrl = (str) => {
-    let url = str.trim();
-    if (!url.startsWith('http://') && !url.startsWith('https://')) {
-      return `https://${url}`;
-    }
-    return url;
-  };
+  import { validateCompany, validateUrl } from '../../../scripts/utilities/validation';
 
   const iconColor = getComputedStyle(document.documentElement)
     .getPropertyValue('--icon-color')
@@ -30,7 +23,7 @@
       <Building color={iconColor} />
       {#if $user.company === 'N/A'}
         <span class="null-text">N/A</span>
-      {:else if $user.company.startsWith('@') && ($user.company.match(/@/g) || []).length === 1}
+      {:else if validateCompany($user.company)}
         <span>
           <a class="link-text" href="https://github.com/{$user.company.slice(1)}" target="_blank">
             {$user.company}
@@ -90,6 +83,12 @@
 
   .detail span {
     margin-inline-start: var(--spacing-sm);
+  }
+
+  @media (max-width: 395px) {
+    .user-details {
+      padding-inline-start: 0;
+    }
   }
 
   @media (min-width: 500px) {

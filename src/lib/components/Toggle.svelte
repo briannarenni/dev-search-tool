@@ -21,6 +21,7 @@
       on:click={handleThemeToggle}
       type="checkbox"
       role="switch"
+      id="toggle-switch"
       aria-checked={isChecked}
       aria-label="Toggle dark mode"
     />

@@ -4,7 +4,6 @@
 
 <header class="header flex-row">
   <h1 class="site-logo">devSearch</h1>
-
   <Toggle />
 </header>
 

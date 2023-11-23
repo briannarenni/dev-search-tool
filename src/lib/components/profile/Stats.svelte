@@ -19,7 +19,6 @@
 </section>
 
 <style>
-  /* User Data */
   .user-stats {
     justify-content: space-around;
     text-align: center;

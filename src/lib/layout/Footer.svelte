@@ -1,7 +1,7 @@
 <footer class="footer">
   <p>
-    Brianna Renni |
-    <a href="https://github.com/briannarenni/" target="_blank">Github</a>
+    Made by Brianna Renni |
+    <a href="https://github.com/briannarenni/" target="_blank">Github ⭐️</a>
   </p>
 </footer>
 
@@ -12,11 +12,11 @@
   }
 
   .footer a {
-    color: var(--action-color);
+    color: var(--action-text);
   }
 
   .footer a:hover {
-    color: var(--action-color);
+    color: var(--action-text);
     font-weight: bold;
   }
 </style>
