@@ -9,10 +9,16 @@
   let isInvalid = false;
   let touched = false;
 
-  const submitSearch = (event) => {
+  const submitSearch = async (event) => {
     if (event.key === 'Enter') {
       event.preventDefault();
-      validateInput();
+      touched = true;
+      if (searchStr.trim() !== '') {
+        validateInput();
+      } else {
+        isInvalid = true;
+        errorText = 'Field cannot be empty';
+      }
     }
   };
 
@@ -44,19 +50,6 @@
       }
     }
   };
-
-  $: if (touched) {
-    const result = validateSearchInput(searchStr);
-    isInvalid = !result.isValid;
-  }
-
-  const handleBlur = () => {
-    touched = true;
-    validateInput();
-    searchInput.blur();
-  };
-
-  $: ariaInvalid = touched ? isInvalid : undefined;
 </script>
 
 <form action="#" class="search-form flex-row" novalidate>
@@ -70,8 +63,7 @@
     bind:this={searchInput}
     bind:value={searchStr}
     on:keydown={submitSearch}
-    on:blur={handleBlur}
-    aria-invalid={ariaInvalid}
+    aria-invalid={isInvalid}
   />
 </form>
 
