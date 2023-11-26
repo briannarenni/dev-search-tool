@@ -13,6 +13,6 @@ Made with Svelte, Pico.css, and Lucide Icons 💜
 
 ## Dev Notes
 
-I've never used Svelte, so I wanted a simple project to dive into it with. Svelte's readability and intuitive syntax is very smooth to work with. The reactivity alone is a welcomed change for me.
+I've never used Svelte, so I wanted a simple project to dive into it with. Svelte's readability and intuitive syntax is very smooth to work with, and the reactivity alone is a welcomed change for me. I mixed my own custom design system (colors, spacing) in with what Pico offers as well.
 
 ## Screenshots
