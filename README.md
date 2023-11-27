@@ -1,6 +1,8 @@
-# Responsive GitHub User Search
+# DevSearch
 
-Made with Svelte, Pico.css, and Lucide Icons 💜
+A simple Github developer profile search tool made with Svelte and Pico.css 💜
+
+Also used: Lucide Icons, Ky, and date-fns
 
 ## Behavior & Features
 
