@@ -6,5 +6,5 @@ export default defineConfig({
   server: {
     open: true
   },
-  base: '/dev-search-tool/'
+  base: '/devsearch-app/'
 });
