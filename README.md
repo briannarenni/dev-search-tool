@@ -13,10 +13,6 @@ Also used: Lucide Icons, Ky, and date-fns
 - Other blank profile information shows as _N/A_
 - Active links to a user's (valid) website, Twitter, or company Github profile
 
-## Dev Notes
-
-I've never used Svelte, so I wanted a simple project to dive into it with. Svelte's readability and intuitive syntax is very smooth to work with, and the reactivity alone is a welcomed change for me. I mixed my own custom design system (colors, spacing) with what Pico offers as well so I could focus on Svelte instead of design.
-
 ## Screenshots
 
 **Dark Mode**
@@ -30,3 +26,7 @@ I've never used Svelte, so I wanted a simple project to dive into it with. Svelt
 **Mobile View**
 
 <img width="494" alt="new-screen" src="https://github.com/briannarenni/devsearch-app/assets/69635579/886c5cb8-257f-45b5-a74f-dab1677b6271">
+
+## Dev Notes
+
+I've never used Svelte, so I wanted a simple project to dive into it with. Svelte's readability and intuitive syntax is very smooth to work with, and the reactivity alone is a welcomed change for me. I mixed my own custom design system (colors, spacing) with what Pico offers as well so I could focus on Svelte instead of design.
