@@ -5,5 +5,6 @@ export default defineConfig({
   plugins: [svelte()],
   server: {
     open: true
-  }
+  },
+  base: '/dev-search-tool/'
 });
