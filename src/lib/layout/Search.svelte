@@ -28,6 +28,7 @@
     errorText = result.errorText;
 
     if (!isInvalid) {
+      resetStore();
       $user.isLoading = true;
       try {
         const userData = await fetchUserData(searchStr);

@@ -1,20 +1,35 @@
 <script>
+  import { SkeletonText } from 'skeleton-elements/svelte';
   import { userProfile as user } from '../../../scripts/stores/user-store';
 </script>
 
 <section class="user-stats flex-row">
   <div class="group flex-col">
-    <p class="stat-title">Repos</p>
-    <p class="stat">{$user.repos}</p>
+    {#if !$user.avatar_url}
+      <SkeletonText width="50%" effect="wave">Followers</SkeletonText>
+      <SkeletonText width="50%" effect="wave">0</SkeletonText>
+    {:else}
+      <p class="stat-title">Repos</p>
+      <p class="stat">{$user.repos}</p>
+    {/if}
   </div>
   <div class="group flex-col">
-    <p class="stat-title">Followers</p>
-    <p class="stat">{$user.followers}</p>
+    {#if !$user.avatar_url}
+      <SkeletonText width="50%" effect="wave">Followers</SkeletonText>
+      <SkeletonText width="50%" effect="wave">0</SkeletonText>
+    {:else}
+      <p class="stat-title">Followers</p>
+      <p class="stat">{$user.followers}</p>
+    {/if}
   </div>
-
   <div class="group flex-col">
-    <p class="stat-title">Following</p>
-    <p class="stat">{$user.following}</p>
+    {#if !$user.avatar_url}
+      <SkeletonText width="50%" effect="wave">Following</SkeletonText>
+      <SkeletonText width="50%" effect="wave">0</SkeletonText>
+    {:else}
+      <p class="stat-title">Following</p>
+      <p class="stat">{$user.following}</p>
+    {/if}
   </div>
 </section>
 

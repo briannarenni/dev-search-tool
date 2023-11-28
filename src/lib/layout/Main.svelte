@@ -10,6 +10,6 @@
 
 <style>
   main {
-    margin-block-start: var(--gap-lg);
+    margin-block-start: var(--gap-md);
   }
 </style>

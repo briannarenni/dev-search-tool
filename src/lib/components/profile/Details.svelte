@@ -1,4 +1,5 @@
 <script>
+  import { SkeletonText } from 'skeleton-elements/svelte';
   import { MapPin, Link, Twitter, Building } from 'lucide-svelte';
   import { userProfile as user } from '../../../scripts/stores/user-store';
   import { validateCompany, validateUrl } from '../../../scripts/utilities/validation';
@@ -12,7 +13,9 @@
   <ul class="user-details">
     <li class="detail location">
       <MapPin color={iconColor} />
-      {#if $user.location === 'N/A'}
+      {#if !$user.avatar_url}
+        <SkeletonText width="80%" effect="wave">Skeleton Placeholder Text</SkeletonText>
+      {:else if $user.location === 'N/A'}
         <span class="null-text">N/A</span>
       {:else}
         <span>{$user.location}</span>
@@ -21,7 +24,9 @@
 
     <li class="detail company">
       <Building color={iconColor} />
-      {#if $user.company === 'N/A'}
+      {#if !$user.avatar_url}
+        <SkeletonText width="80%" effect="wave">Skeleton Placeholder Text</SkeletonText>
+      {:else if $user.company === 'N/A'}
         <span class="null-text">N/A</span>
       {:else if validateCompany($user.company)}
         <span>
@@ -34,9 +39,12 @@
       {/if}
     </li>
 
+    <!-- !Test -->
     <li class="detail twitter">
       <Twitter color={iconColor} />
-      {#if $user.twitter === 'N/A'}
+      {#if !$user.avatar_url}
+        <SkeletonText width="80%" effect="wave">Skeleton Placeholder Text</SkeletonText>
+      {:else if $user.twitter === 'N/A'}
         <span class="null-text">N/A</span>
       {:else}
         <span>
@@ -49,7 +57,9 @@
 
     <li class="detail website">
       <Link color={iconColor} />
-      {#if !$user.website}
+      {#if !$user.avatar_url}
+        <SkeletonText width="80%" effect="wave">Skeleton Placeholder Text</SkeletonText>
+      {:else if !$user.website}
         <span class="null-text">N/A</span>
       {:else}
         <span>
