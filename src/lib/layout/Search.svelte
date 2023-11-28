@@ -1,7 +1,7 @@
 <script>
-  import { validateSearchInput } from '../../scripts/utilities/validation';
-  import { fetchUserData } from '../../scripts/utilities/fetch';
-  import { mapApiData, resetStore, userProfile as user } from '../../scripts/stores/user-store';
+  import { validateSearchInput } from '@scripts/utilities/validation.js';
+  import { fetchUserData } from '@scripts/utilities/fetch.js';
+  import { mapApiData, resetStore, userProfile as user } from '@scripts/stores/user-store.js';
 
   let searchInput;
   let searchStr = '';
@@ -28,6 +28,7 @@
     errorText = result.errorText;
 
     if (!isInvalid) {
+      resetStore();
       $user.isLoading = true;
       try {
         const userData = await fetchUserData(searchStr);

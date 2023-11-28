@@ -1,6 +1,6 @@
 <script>
   import { Sun, Moon } from 'lucide-svelte';
-  import { currentTheme, updateUserTheme } from '../../scripts/stores/theme-store';
+  import { currentTheme, updateUserTheme } from '@scripts/stores/theme-store.js';
 
   let toggleSwitch;
   let isChecked = $currentTheme === 'dark';

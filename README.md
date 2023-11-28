@@ -2,7 +2,7 @@
 
 A simple Github developer profile search tool made with Svelte and Pico.css 💜
 
-Also used: Lucide Icons, Ky, and date-fns
+Also used: Lucide Icons, Skeleton Elements, Ky, and date-fns
 
 ## Behavior & Features
 

@@ -1,10 +1,9 @@
 <script>
   import { onMount } from 'svelte';
 
-  import { fetchUserData } from '../../scripts/utilities/fetch';
-  import { mapApiData, userProfile as user } from '../../scripts/stores/user-store';
-  import { Info, Stats, Details } from '../components/profile/index.js';
-  import Loading from '../components/Loading.svelte';
+  import { fetchUserData } from '@scripts/utilities/fetch.js';
+  import { mapApiData, userProfile as user } from '@scripts/stores/user-store.js';
+  import { Info, Stats, Details } from '@components/profile/index.js';
 
   onMount(async () => {
     const userData = await fetchUserData('octocat');
@@ -13,13 +12,9 @@
 </script>
 
 <article class="card">
-  {#if $user.isLoading}
-    <Loading />
-  {:else if $user.username}
-    <Info />
-    <Stats />
-    <Details />
-  {/if}
+  <Info />
+  <Stats />
+  <Details />
 </article>
 
 <style>

@@ -1,6 +1,7 @@
 <script>
+  import { SkeletonAvatar, SkeletonBlock, SkeletonText } from 'skeleton-elements/svelte';
   import { Cake } from 'lucide-svelte';
-  import { userProfile as user } from '../../../scripts/stores/user-store';
+  import { userProfile as user } from '@scripts/stores/user-store.js';
 
   const iconColor = getComputedStyle(document.documentElement)
     .getPropertyValue('--icon-color')
@@ -9,22 +10,33 @@
 
 <div class="info-content flex-col">
   <div class="avatar-wrap flex-row">
-    <img src={$user.avatar_url} class="avatar" alt="User's avatar" />
+    {#if !$user.avatar_url}
+      <SkeletonAvatar size={80} effect="wave" />
+    {:else}
+      <img src={$user.avatar_url} class="avatar" alt="User's avatar" />
+    {/if}
   </div>
 
+  <!-- TODO: Add icons? -->
   <section class="user-info flex-col">
-    {#if $user.name !== null}
-      <h3 class="name">{$user.name}</h3>
+    {#if !$user.avatar_url}
+      <SkeletonBlock tag="h3" width="175px" height="75px" effect="wave" />
     {:else}
-      <h3 class="name">{$user.username}</h3>
+      {#if $user.name !== null}
+        <h3 class="name">{$user.name}</h3>
+      {:else}
+        <h3 class="name">{$user.username}</h3>
+      {/if}
+      <h4 class="username">{$user.username}</h4>
+      <p class="joined flex-row"><Cake color={iconColor} /> {$user.join_date}</p>
     {/if}
-    <h4 class="username">{$user.username}</h4>
-    <p class="joined flex-row"><Cake color={iconColor} /> {$user.join_date}</p>
   </section>
 </div>
 
 <section class="bio-wrap">
-  {#if $user.bio === '(Profile has no bio)'}
+  {#if !$user.avatar_url}
+    <SkeletonBlock tag="h3" width="100%" height="50px" effect="wave" />
+  {:else if $user.bio === '(Profile has no bio)'}
     <p class="user-bio null-text">{$user.bio}</p>
   {:else}
     <p class="user-bio">{$user.bio}</p>

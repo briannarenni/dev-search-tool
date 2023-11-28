@@ -1,5 +1,5 @@
 <script>
-  import { Header, Main, Footer } from './lib/layout/index';
+  import { Header, Main, Footer } from '@lib/layout/index.js';
 </script>
 
 <div class="app-container">

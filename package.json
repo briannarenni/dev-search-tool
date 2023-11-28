@@ -21,6 +21,7 @@
     "esbuild": "^0.19.5",
     "ky": "^1.1.3",
     "lucide-svelte": "^0.292.0",
-    "sass": "^1.69.5"
+    "sass": "^1.69.5",
+    "skeleton-elements": "^4.0.1"
   }
 }

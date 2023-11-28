@@ -1,5 +1,5 @@
 <script>
-  import Toggle from '../components/Toggle.svelte';
+  import Toggle from '@components/Toggle.svelte';
 </script>
 
 <header class="header flex-row">

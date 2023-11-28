@@ -1,6 +1,6 @@
-@import './styles/_reset.css';
-@import './styles/_colors.css';
-@import './styles/_scaling.css';
+@import '@styles/_reset.css';
+@import '@styles/_colors.css';
+@import '@styles/_scaling.css';
 
 :root {
   color-scheme: light dark;
