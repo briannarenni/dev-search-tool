@@ -28,7 +28,6 @@
     errorText = result.errorText;
 
     if (!isInvalid) {
-      resetStore();
       try {
         const userData = await fetchUserData(searchStr);
         mapApiData(userData);
@@ -36,15 +35,14 @@
         errorText = '';
       } catch (error) {
         if (error.message === 'No results') {
-          isInvalid = true;
-          resetStore();
+          errorText = 'No users found';
+          return;
         } else {
           isInvalid = false;
+          errorText = 'An unexpected API error occurred: ' + error.message;
         }
-        errorText = error.message;
       } finally {
         searchStr = '';
-        isInvalid = false;
       }
     }
   };

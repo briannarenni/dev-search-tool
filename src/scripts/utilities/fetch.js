@@ -5,8 +5,6 @@ const baseURL = 'https://api.github.com/';
 export const fetchUserData = async (username) => {
   try {
     const response = await ky.get(`${baseURL}users/${username}`).json();
-    // console
-    console.log(response);
     return response;
   } catch (error) {
     console.error(error);
@@ -17,4 +15,5 @@ export const fetchUserData = async (username) => {
     }
   }
 };
+
 
