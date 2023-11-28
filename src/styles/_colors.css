@@ -31,7 +31,6 @@
   --secondary-text: #5b7093;
   /* --null-text: rgba(53, 53, 53, 0.654); */
   --null-text: #7f94b9;
-  --box-shadow: 0px 16px 30px -10px #4660bb33;
 }
 
 /* Dark Mode */
@@ -48,5 +47,4 @@
   --primary-text: #ffffff;
   --secondary-text: #d4d3d3;
   --null-text: #5b7093;
-  --box-shadow: none;
 }
