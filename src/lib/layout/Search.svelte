@@ -29,7 +29,6 @@
 
     if (!isInvalid) {
       resetStore();
-      $user.isLoading = true;
       try {
         const userData = await fetchUserData(searchStr);
         mapApiData(userData);
@@ -41,11 +40,9 @@
           resetStore();
         } else {
           isInvalid = false;
-          $user.isLoading = false;
         }
         errorText = error.message;
       } finally {
-        $user.isLoading = false;
         searchStr = '';
         isInvalid = false;
       }

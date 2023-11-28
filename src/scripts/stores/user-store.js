@@ -14,7 +14,6 @@ export const userProfile = writable({
   website: '',
   twitter: '',
   company: '',
-  isLoading: false
 });
 
 export const mapApiData = (data) => {
@@ -31,7 +30,6 @@ export const mapApiData = (data) => {
     website: data.blog ?? 'N/A',
     twitter: data.twitter_username ?? 'N/A',
     company: data.company ?? 'N/A',
-    isLoading: false
   });
 };
 
@@ -49,6 +47,5 @@ export const resetStore = () => {
     website: '',
     twitter: '',
     company: '',
-    isLoading: false
   });
 }
