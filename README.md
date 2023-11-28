@@ -29,4 +29,4 @@ Also used: Lucide Icons, Skeleton Elements, Ky, and date-fns
 
 ## Dev Notes
 
-I've never used Svelte, so I wanted a simple project to dive into it with. Svelte's readability and intuitive syntax is very smooth to work with, and the reactivity alone is a welcomed change for me. I mixed my own custom design system (colors, spacing) with what Pico offers as well so I could focus on Svelte instead of design.
+I've never used Svelte, so I wanted a simple project to dive into it with. Svelte's readability and intuitive syntax is very smooth to work with, and the reactivity alone is a welcomed change for me. I mixed my own custom design system (colors, spacing) with what Pico offers as well so I could focus on Svelte instead of design. I also got to try Vite for the first time, and implement a skeleton loader, which I've never added in before.
