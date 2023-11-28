@@ -1,8 +1,8 @@
 <script>
   import { SkeletonText } from 'skeleton-elements/svelte';
   import { MapPin, Link, Twitter, Building } from 'lucide-svelte';
-  import { userProfile as user } from '../../../scripts/stores/user-store';
-  import { validateCompany, validateUrl } from '../../../scripts/utilities/validation';
+  import { userProfile as user } from '@scripts/stores/user-store.js';
+  import { validateCompany, validateUrl } from '@scripts/utilities/validation.js';
 
   const iconColor = getComputedStyle(document.documentElement)
     .getPropertyValue('--icon-color')

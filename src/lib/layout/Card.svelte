@@ -1,9 +1,9 @@
 <script>
   import { onMount } from 'svelte';
 
-  import { fetchUserData } from '../../scripts/utilities/fetch';
-  import { mapApiData, userProfile as user } from '../../scripts/stores/user-store';
-  import { Info, Stats, Details } from '../components/profile/index.js';
+  import { fetchUserData } from '@scripts/utilities/fetch.js';
+  import { mapApiData, userProfile as user } from '@scripts/stores/user-store.js';
+  import { Info, Stats, Details } from '@components/profile/index.js';
 
   onMount(async () => {
     const userData = await fetchUserData('octocat');

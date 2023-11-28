@@ -1,6 +1,6 @@
 <script>
   import { SkeletonText } from 'skeleton-elements/svelte';
-  import { userProfile as user } from '../../../scripts/stores/user-store';
+  import { userProfile as user } from '@scripts/stores/user-store.js';
 </script>
 
 <section class="user-stats flex-row">

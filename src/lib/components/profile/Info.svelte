@@ -1,7 +1,7 @@
 <script>
   import { SkeletonAvatar, SkeletonBlock, SkeletonText } from 'skeleton-elements/svelte';
   import { Cake } from 'lucide-svelte';
-  import { userProfile as user } from '../../../scripts/stores/user-store';
+  import { userProfile as user } from '@scripts/stores/user-store.js';
 
   const iconColor = getComputedStyle(document.documentElement)
     .getPropertyValue('--icon-color')
