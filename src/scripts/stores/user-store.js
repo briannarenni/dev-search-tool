@@ -19,16 +19,16 @@ export const userProfile = writable({
 export const mapApiData = (data) => {
   userProfile.set({
     avatar_url: data.avatar_url,
-    name: data.name ?? data.login,
+    name: data.name ??= data.login,
     username: `@${data.login}`,
     join_date: `Joined ${format(parseISO(data.created_at), 'dd MMM yyyy')}`,
-    bio: data.bio ?? '(Profile has no bio)',
+    bio: data.bio ??= '(Profile has no bio)',
     repos: data.public_repos,
     followers: data.followers,
     following: data.following,
-    location: data.location ?? 'N/A',
-    website: data.blog ?? 'N/A',
-    twitter: data.twitter_username ?? 'N/A',
+    location: data.location ??= 'N/A',
+    website: data.blog ??= 'N/A',
+    twitter: data.twitter_username ??= 'N/A',
     company: data.company ?? 'N/A',
   });
 };
