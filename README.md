@@ -1,6 +1,8 @@
 # DevSearch
 
-A simple Github developer profile search tool made with Svelte and Pico.css, and deployed on Netlify 💜 [Live Site](https://ghdevsearcher.netlify.app/)
+[Live Site](https://ghdevsearcher.netlify.app/)
+
+A simple Github developer profile search tool made with Svelte and Pico.css, and deployed on Netlify 💜
 
 Also used: Lucide Icons, Skeleton Elements, Ky, and date-fns
 
