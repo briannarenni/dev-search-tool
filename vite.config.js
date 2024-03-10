@@ -6,7 +6,6 @@ export default defineConfig({
   server: {
     open: true
   },
-  base: '/devsearch-app/',
   resolve: {
     alias: {
       '@': './',
